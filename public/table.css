@@ -1,0 +1,11 @@
+
+html{
+    /*background: linear-gradient(to top left, powderblue, pink);*/
+    /*background: #009bff;*/
+    /*background: -webkit-linear-gradient(top, #ccc 0%, #888 100%);*/
+    /*background: rgb(200,255,227);*/
+    /*background: -moz-linear-gradient(292deg, rgba(200,255,227,1) 23%, rgba(0,155,255,1) 100%);*/
+    background: -webkit-linear-gradient(292deg, rgba(200,255,227,1) 23%, rgba(0,155,255,1) 100%);
+    /*background: linear-gradient(292deg, rgba(200,255,227,1) 23%, rgba(0,155,255,1) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8ffe3",endColorstr="#009bff",GradientType=1);*/
+}
