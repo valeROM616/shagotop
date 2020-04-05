@@ -10,16 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_01_155704) do
+ActiveRecord::Schema.define(version: 2020_04_05_101433) do
 
-  create_table "users", force: :cascade do |t|
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "user_lists", force: :cascade do |t|
     t.integer "user_id"
     t.integer "steps"
-    t.integer "length"
+    t.float "length"
+    t.string "firstname"
+    t.string "lastname"
+    t.boolean "flag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.string "lastname"
   end
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'bool' for column 'flag'
 
 end

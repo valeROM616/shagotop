@@ -21,6 +21,8 @@ gem 'puma', '~> 4.1'
 
 gem 'httparty'
 
+gem 'axlsx'
+
 gem 'addressable'
 
 gem 'imgkit'
@@ -34,6 +36,9 @@ gem 'rest-client'
 gem 'multipart-post'
 
 gem 'http'
+
+gem 'whenever', require: false
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

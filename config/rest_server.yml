@@ -1,12 +1,8 @@
 defaults: &defaults
-#  community_token: '19d0aa7129ee207ca143281e03bcdbc21b8ee73300fe2cf88bff213a059ccfbec0aff97cb2eba441946d1'
   community_token: '49be4055b0e3d6251e81c9c464f48212106ce247536aef3ab31dbef27a7eb760889d2ec74ecbc58f475c3'
-#  community_token: '646a44e0c0dc180764e70b238998ee9ac71eed7c4853dc0a6b92b241bb5e701af11e54a30d1e9f2781474'
   confirmation_code: 'bdc2d588'
-#  confirmation_code: 'c81c769d'
   admin_id: '32608224'
   access_token: '4e6e66404e6e66404e6e6640044e08b29244e6e4e6e664015b536f0ff0293c71abdfeb0'
-#  access_token: 'd32945b668f5c07f1a63fb099dc7a4d6167436ea6596f344d2fafd411099d7390ea9f5fc999cb20b7e3b8'
 development:
   <<: *defaults
 test:
