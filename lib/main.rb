@@ -4,8 +4,7 @@ class String
   end
 end
 class Main
-  @perem = Hash.new
-
+  @path = Rails.root.join("images")
   def self.confirmation
     Rails.configuration.rest_server[:confirmation_code]
   end
@@ -187,11 +186,10 @@ class Main
   end
 
   def self.get_image(flag)
-    path = "/home/valerom/chat-bot-api/images/"
     File.exist?("#{flag}.jpg") ? FileUtils.remove("#{flag}.jpg") : 'ok'
     kit = IMGKit.new(get_html(flag), :width => 500)
-    kit.stylesheets << '/home/valerom/chat-bot-api/public/table.css'
-    kit.to_file(path + "#{flag}.jpg")
+    kit.stylesheets << @path.join("table.css")
+    kit.to_file(@path.join("#{flag}.jpg"))
   end
 
   def self.upload_image(flag, id)
@@ -199,7 +197,7 @@ class Main
     response = VkWrapper.vk_api(access_token, 'photos.getMessagesUploadServer', {})
     url = response['response']['upload_url']
     resp = HTTP.post(url, :form => {
-        photo: HTTP::FormData::File.new("/home/valerom/chat-bot-api/images/#{flag}.jpg")
+        photo: HTTP::FormData::File.new(@path.join("#{flag}.jpg"))
     })
     keys = JSON.parse(resp)
     ans = VkWrapper.vk_api(access_token, 'photos.saveMessagesPhoto', {:server => keys['server'], :photo => keys['photo'], :hash => keys['hash']})
