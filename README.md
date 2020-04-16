@@ -6,9 +6,9 @@
 lib/main.rb - обработка сообщений
 lib/vk_wrapper.rb - работа с Vk API
 
-Контроллер app/controllers/main_controller.rb отвечает
+Контроллер app/controllers/users_controller.rb отвечает
 за получение сообщений и пересылку их на соответствующие 
 функции проекта.
 
-
+За расписание уведомлений отвечает файл config/schedule.rb
 
