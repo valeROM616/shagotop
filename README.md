@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Этот README предназначен для быстрой ориентации в структуре проекта Шаготоп.
 
-Things you may want to cover:
+Основная логика бота лежит в директории lib/
+lib/main.rb - обработка сообщений
+lib/vk_wrapper.rb - работа с Vk API
 
-* Ruby version
+Контроллер app/controllers/main_controller.rb отвечает
+за получение сообщений и пересылку их на соответствующие 
+функции проекта.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
